@@ -4,14 +4,14 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/appleboy/easyssh-proxy"
+	"github.com/wataash/easyssh-proxy"
 )
 
 func main() {
 	// Create MakeConfig instance with remote username, server address and path to private key.
 	ssh := &easyssh.MakeConfig{
-		User:   "appleboy",
-		Server: "example.com",
+		User:   "wsh",
+		Server: "localhost",
 		// Optional key or Password without either we try to contact your agent SOCKET
 		//Password: "password",
 		// Paste your source content of private key
@@ -20,7 +20,7 @@ func main() {
 		// 7XC9wlRna4b3Ln8ew3q1ZcBjXwD4ppbTlmwAfQIaZTGJUgQbdsO9YA==
 		// -----END RSA PRIVATE KEY-----
 		// `,
-		KeyPath: "/Users/username/.ssh/id_rsa",
+		// KeyPath: "/home/wsh/.ssh/id_ed25519",
 		Port:    "22",
 		Timeout: 60 * time.Second,
 	}
